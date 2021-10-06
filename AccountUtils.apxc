@@ -1,0 +1,7 @@
+public class AccountUtils {
+    public static List<Account> accountsByState (String abstate){
+        List<Account> acctList = [SELECT ID, NAME FROM Account WHERE billingState = :abstate];
+        System.debug(acctList); 
+        return acctList;
+    }
+}
